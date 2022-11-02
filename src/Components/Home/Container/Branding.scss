@@ -1,0 +1,89 @@
+@mixin mobie {
+    @media (max-width: 391px) {
+        @content;
+    }
+}
+.branding {
+    display: flex;
+    justify-content: space-between;
+    width: 1065px;
+    height: 100%;
+    margin: 0 auto;
+    gap: 180px;
+    text-align: left !important;
+    @include mobie {
+        flex-wrap: wrap;
+        transform: translateY(-140px);
+    }
+    .branding_left {
+        width: 450px;
+        height: 450px;
+        flex-basis: 80%;
+        order: 1;
+        @include mobie {
+            width: 380px;
+            height: 380px;
+            order: 2;
+        }
+        img {
+            object-fit: contain;
+            @include mobie {
+                transform: translateX(2%);
+                width: 380px;
+            }
+        }
+    }
+    .branding_right {
+        margin-top: 120px;
+        flex-basis: 80%;
+        order: 2;
+        @include mobie {
+            order: 1;
+        }
+
+        h1 {
+            width: 435.69px;
+            height: 102.35px;
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 100%;
+            /* or 48px */
+            margin-bottom: 26px;
+            text-transform: capitalize;
+
+            color: #272d38;
+            @include mobie() {
+                text-align: center;
+                width: 380px;
+                height: 76px;
+                font-size: 35px;
+            }
+        }
+        p {
+            width: 392.22px;
+            height: 83.16px;
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 28px;
+            /* or 172% */
+            word-spacing: 7.6px;
+            text-transform: capitalize;
+            color: #272d38;
+            margin-bottom: 46px;
+            @include mobie {
+                text-align: center;
+            }
+        }
+        img {
+            @include mobie {
+                transform: rotate(90deg);
+                position: relative;
+                right: -46%;
+            }
+        }
+    }
+}

@@ -1,0 +1,58 @@
+@mixin mobie {
+    @media (max-width: 391px) {
+        @content;
+    }
+}
+.test {
+    align-items: center;
+    text-align: center;
+    margin-top: 136px ;
+    padding-bottom: 100px;
+    @include mobie {
+        margin-top: 0;
+    }
+    p {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 28px;
+        /* or 172% */
+
+        text-transform: capitalize;
+
+        color: #272d38;
+        @include mobie() {
+        }
+    }
+    h1 {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 100%;
+        /* or 48px */
+
+        text-align: center;
+        text-transform: capitalize;
+
+        color: #272d38;
+        margin-bottom: 38.65px;
+        @include mobie() {
+            font-size: 12px;
+        }
+    }
+    .test_item {
+        width: 1080px;
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+        margin: 0 auto;
+        // transform: translateX(70px);
+        @include mobie {
+            display: block;
+            width: 100%;
+            margin-bottom: 150px;
+        }
+    }
+}

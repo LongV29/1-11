@@ -1,0 +1,66 @@
+@mixin mobie { @media(max-width:391px){
+    @content
+}}
+.navbar{
+    padding-top: 48px;
+    justify-content: space-between;
+    width: 1076px;
+    height: 28px;
+    left: 188px;
+    top: 46px;  
+    display: flex;
+    margin: 0 auto;
+    padding-bottom: 100px;
+    @include mobie(){
+        width: 380px;
+        height: 24px;                
+    }
+    .logo_menu{
+        display: none;
+        @include mobie(){
+            position: absolute;
+            display: block;
+            // transform: translate(-335%,15%);
+            cursor: pointer;
+            font-size: 20px;
+        }
+    }
+    .navbar_menu{
+        display: flex;
+        gap: 50px;
+        @include mobie(){
+            display: none;
+        }
+        h4{
+            min-width: 65px;
+            height: 22px;
+            left: 1199px;
+            top: 48px;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400 !important;
+            font-size: 18px;
+            line-height: 22px;
+            /* identical to box height */
+            text-transform: lowercase;
+            color: #272D38;   
+        }           
+    }   
+    .navbar_logo{
+        
+        min-width: 170px;
+        height: 24px;
+        left: 188px;
+        top: 48px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        text-transform: uppercase;
+        color: #272D38;
+        @include mobie(){
+            font-size: 14px;
+        }
+    }       
+}

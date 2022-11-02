@@ -1,0 +1,100 @@
+@mixin mobie { @media(max-width:391px){
+    @content
+}}
+
+.hero_section{
+     width: 1065px;
+    // height: 450px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    @include mobie(){
+        display: block;
+
+    }
+    .hero_section-left{
+        text-align: left;
+        h1{
+            width: 540px;
+            height: 192px;
+            left: 188px;
+            top: 213px;
+            text-align: left!important;
+            
+            /* H1 - Main Heading */
+            
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 64px;
+            line-height: 100%;
+            /* or 64px */
+            
+            text-transform: capitalize;
+            
+            color: #272D38;
+            @include mobie(){
+                font-size: 40px;
+                width: 378px;
+                height: 120px;                        
+            }
+        }
+        p{
+            width: 468px;
+            height: 56px;
+            left: 188px;
+            top: 429px;
+            text-align: left!important;                    
+            /* Body Text */           
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 28px;
+            /* or 153% */
+            margin-top: 24px;
+            text-transform: capitalize;
+            
+            color: #272D38;
+            @include mobie(){
+                width: 378px;
+                height: 56px;
+                font-size: 16px;
+            }
+
+        }
+        button{
+            width: 167px;
+            height: 48px;
+            // align-items:;
+            text-align: center;
+            text-transform: uppercase;
+            margin-top: 40px;
+            color: #FFFFFF;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 28px;  
+            outline:none;
+            background: #8EADD5;
+            border-radius: 8px;   
+            border: none;
+            cursor: pointer;
+            @include mobie(){
+            transform: translate(-213%,-35%);                                               
+
+            }        
+        }
+    }
+    .hero_section-right{
+        width: 450px;
+        height: 450px;           
+        transform: translateX(-70px);
+        @include mobie(){
+            width: 358px;
+            height: 358px;
+            transform: translateX(-33px);
+        }
+    }
+}
