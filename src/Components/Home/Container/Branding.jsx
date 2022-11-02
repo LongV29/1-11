@@ -16,6 +16,7 @@ function Branding({ data }) {
         <img src={data.arrow} alt="error" />
       </div>
     </div>
+    
   );
 }
 
