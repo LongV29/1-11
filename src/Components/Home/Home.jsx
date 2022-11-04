@@ -7,6 +7,7 @@ import Footer from "./Footer/Footer";
 import Branding from "./Container/Branding";
 import img from "../../img/index";
 import Test from "./Container/Test";
+import GetList from "./Container/getList";
 
 function Home(props) {
   const data1 = [
@@ -48,7 +49,8 @@ function Home(props) {
       <Companies />
       <Branding data={data2[0]} />
       <Branding data={data2[1]} />
-      <Test />
+      <GetList />
+      {/* <Test /> */}
       <Hero data={data1[1]} />
       <Footer />
     </div>
